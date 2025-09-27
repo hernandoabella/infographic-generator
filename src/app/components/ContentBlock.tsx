@@ -14,8 +14,6 @@ export function ContentBlock({
   title, 
   code, 
   description, 
-  index,
-  totalBlocks,
   customization 
 }: ContentBlockProps) {
   // Determine block height based on content length
@@ -63,13 +61,7 @@ export function ContentBlock({
       `}
       style={blockStyle}
     >
-      {/* Block Number */}
-      <div
-        className="absolute -top-3 -left-3 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white text-sm"
-        style={{ backgroundColor: customization?.primaryColor || "#3B82F6" }}
-      >
-        {index + 1}
-      </div>
+      
 
       {/* Title */}
       <h3
