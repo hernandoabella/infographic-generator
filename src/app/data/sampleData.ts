@@ -1,23 +1,16 @@
 import { InfographicData, CustomizationOptions } from "../types";
 
 export const defaultCustomization: CustomizationOptions = {
-  // Colors
   primaryColor: '#3B82F6',
-  backgroundColor: '#1F2937',
-  textColor: '#F9FAFB',
+  backgroundColor: '#FFFFFF', // Changed to white
+  textColor: '#1F2937', // Changed to dark gray
   accentColor: '#10B981',
-
-  // Typography
   fontFamily: 'inter',
   fontSize: 'medium',
   fontWeight: 'normal',
-
-  // Layout
   spacing: 'comfortable',
   borderRadius: 'large',
   shadow: 'medium',
-
-  // Theme
   theme: 'default'
 };
 
