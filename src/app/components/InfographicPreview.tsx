@@ -2,6 +2,7 @@ import { InfographicData } from "../types";
 import { Header } from "./Header";
 import { ContentBlock } from "./ContentBlock";
 import { Footer } from "./Footer";
+import { MenuBar } from "./MenuBar";
 
 interface InfographicPreviewProps {
   data: InfographicData;
@@ -74,7 +75,8 @@ const getGridLayout = () => {
   } as React.CSSProperties;
 
   return (
-    <div
+    <div>
+      <div
       id="print-area"
       className={`w-full max-w-6xl p-8 transition-all duration-300 print:bg-white print:text-black print:shadow-none print:w-full ${getCustomStyles()}`}
       style={{
@@ -102,10 +104,16 @@ const getGridLayout = () => {
         ))}
       </div>
 
+      
+
       <Footer 
         {...data.footer} 
         customization={customization}
       />
+
+      
+    </div>
+    <MenuBar targetId="print-area" />
     </div>
   );
 }
